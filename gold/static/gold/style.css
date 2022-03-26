@@ -1,0 +1,62 @@
+        .special-titles{
+            color: black;
+            font-family: Serif;
+            font-style: oblique;
+            font-size: 32pt;
+            padding: 16px;
+        }
+         #navigation-block{
+            background-color: wheat;
+        }
+        .centered-image{
+            display: block;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .centered {
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        h4 {
+            text-align: center;
+        }
+        div {
+            background-color: SpringGreen;
+            box-shadow: 8px 8px 5px #444;
+            padding: 8px 12px;
+            margin-bottom: 16px;
+            margin-top: 16px;
+            border: 4px solid black;
+        }
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            border: 8px solid #333;
+        }
+        p {
+            text-indent: 12px;
+        }
+        ul > li {
+            font-family: monospace;
+        }
+        .Yellow {
+            background-color: Yellow;
+        }
+        .SkyBlue {
+            background-color: SkyBlue;
+        }
+        .Pink {
+            background-color: Pink;
+        }
+        code {
+            font-family: monospace;
+        }
+

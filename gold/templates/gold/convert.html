@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gold</title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'gold/style.css' %}">
+</head>
+<body>
+<div>
+    <h2>Worth your weight in gold</h2>
+    <p>Input your wait and press the button</p>
+    <p>Click results to remove themselves</p>
+    <input type="number" id="input" placeholder="150">
+    <select id="select">
+        <option value="T">T</option>
+        <option value="g">g</option>
+        <option value="t_oz">t_oz</option>
+        <option value="kg">kg</option>
+        <option value="lb">lb</option>
+        <option value="oz">oz</option>
+    </select>
+    <button id="button">Calculate</button>
+    <p id="price">Please Wait</p>
+    <script src="{% static 'gold/script.js' %}"> </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan</title>
+    <link href="../../static/gold/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<div>
+    <h1>
+        Phase 0: Requirements Specification (10%)
+    </h1>
+    <h3>
+        Requirements specification is the process where you come to understand the problem that the software will
+        address, and document in detail what the system needs to do. This phase involves close interaction between
+        users and developers because problems are not always well-defined.
+    </h3>
+    <ul>
+        <li>So we're basically writing two apps. One converts
+        some units around, and returns the answer in a json file.
+        The other will take in user input, make get requests to those
+        two api's and then display an answer with the date.</li>
+    </ul>
+</div>
+
+<div>
+    <h1>
+        Phase 1: System Analysis (10%)
+    </h1>
+    <h3>
+        In this phase identify the input(s) and output(s) and consider how data flows through the system. The essence
+        of system analysis is input, process, and output (IPO).
+    </h3>
+    <ul>
+        <li>So for the convert app, there are three inputs coming in from the
+        search bar in a get request. The from, to, and value inputs. Then it converts
+        and outputs two answers in the form of a json file, the conversion factor and unit.
+        Unless there's an error, then it outputs the one error</li>
+        <li>The other app has a little more going on. First it takes input from the user. The number field
+        and then the conversion units. It then sends them to the other app to receive the answer. It also sends
+        a get request to Nasdaq where we'll parse through the returned json to get the current price
+        of gold. Finally we put the answer onto a div that can be deleted when clicked.</li>
+    </ul>
+
+</div>
+
+<div>
+    <h1>
+        Phase 2: Design (30%)
+    </h1>
+    <h3>
+        In the design phase you devise a process for obtaining the output from the input. Decompose the problem into
+        manageable components, then design each component individually.
+    </h3>
+    <ul>
+        <li>For the convert we'll just define a convert method in views. We'll get the object
+        that has our conversion factors and tie it in with a dictionary of string values that may be sent to us.
+        Then, with a little bit of if statements to ensure its all valid. We use the request.GET to find the values
+        perform the conversion, and send it back in a json response using the JsonResponse(data) method.</li>
+        <li>Our other app will have one div with the inputs and button, with a little instructions. Mainly it will come from our
+        javascript file. First we'll load the date, then we'll fetch the data from nasdaq, then we'll put our onclick
+        function together. We'll keep our remove(div) function from the last assignment too. Our evaluate function takes in
+        the two inputs and the price of gold from nasdaq. We'll use an if statement to catch invalid input and then fetch the
+        conversion from our other app.</li>
+    </ul>
+</div>
+
+<div>
+    <h1>
+        Phase 3: Implementation (15%)
+    </h1>
+    <h3>
+        Implementation is when you translate your design into a runnable program in a real programming language.
+    </h3>
+    <ul>
+        <li>Everything's looking good. I even got the pointless models together. Because this is really similar to our last
+        two assignments I could reuse a bit of code from each of those. </li>
+    </ul>
+</div>
+
+<div>
+    <h1>
+        Phase 4: Testing & Debugging (30%)
+    </h1>
+    <h3>
+        Testing ensures that the code meets the requirements specification and weeds out bugs. In the real-world an
+        independent team of software engineers not involved in the design and implementation of the product usually
+        conducts testing.
+    </h3>
+    <ul>
+        <li>I just tested all the different inputs. And then did a few more test when the other websites were blocked.
+        I did run into a little problem with the fetch method but I remembered to use the .catch(error =>{}). I also realized
+        I forgot a little bit of formatting but that was a quick fix. Lastly I realized I didn't want e, -, or + in the input option
+        so I added an event listener to it to prevent the keys being entered into it.</li>
+    </ul>
+</div>
+
+<div>
+    <h1>
+        Phase 5: Deployment (5%)
+    </h1>
+    <h3>
+        Deployment makes the software available for use. Depending on the type of the software, it may be installed
+        on each user’s machine or installed on a server accessible on the Internet.
+    </h3>
+    <ul>
+        <li>Got it all pushed</li>
+    </ul>
+</div>
+
+<div>
+    <h1>
+        Phase 6: Maintenance
+    </h1>
+    <h3>
+        Maintenance is concerned with updating and improving the product. A software product must continue to perform
+        and improve in an ever-evolving environment. This requires periodic upgrades of the product to fix newly
+        discovered bugs and incorporate changes.
+    </h3>
+    <ul>
+        <li>What parts of your program are sloppily written and hard to understand?</li>
+        <li>Will your documentation make sense to anybody besides yourself? yourself in six month’s time?</li>
+        <li>How easy will it be to add a new feature to this program in a year?</li>
+        <li>Will your program continue to work after upgrading your computer’s hardware? the operating system? to the next version of Python?</li>
+    </ul>
+</div>
+
+</body>
+</html>
